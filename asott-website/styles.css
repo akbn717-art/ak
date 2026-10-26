@@ -253,3 +253,26 @@ h3 { font-size: 19px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.
   .contact-list { font-size: 17px; }
   .hero { padding: 48px 0 64px; }
 }
+
+/* Contact form */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+.contact-form { background: #fff; border: 1px solid var(--line); border-radius: 22px; padding: 32px; display: grid; gap: 16px; box-shadow: 0 10px 40px rgba(0,0,0,.05); }
+.contact-form h3 { font-size: 22px; margin-bottom: 4px; }
+.contact-form label { display: grid; gap: 6px; font-weight: 600; font-size: 14.5px; }
+.contact-form .req { color: var(--gold); margin-left: 2px; }
+.contact-form small { font-weight: 400; color: var(--muted); }
+.contact-form input, .contact-form select, .contact-form textarea { font: inherit; font-weight: 400; font-size: 16px; color: var(--ink); background: var(--cream); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; width: 100%; }
+.contact-form textarea { resize: vertical; min-height: 120px; }
+.contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { outline: none; border-color: var(--ink); box-shadow: 0 0 0 3px rgba(246,189,52,.45); }
+.contact-form .invalid { border-color: #b42318; }
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.check { grid-template-columns: auto 1fr !important; align-items: start; font-weight: 400 !important; color: var(--text); }
+.check input { width: 18px; height: 18px; margin-top: 2px; accent-color: var(--ink); }
+.contact-form button { justify-self: start; cursor: pointer; }
+.contact-form button[disabled] { opacity: .6; cursor: wait; }
+.form-status { font-weight: 600; font-size: 15px; min-height: 1.4em; }
+.form-status.ok { color: #1a7f37; }
+.form-status.err { color: #b42318; }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+@media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; gap: 40px; } }
+@media (max-width: 620px) { .row2 { grid-template-columns: 1fr; } .contact-form { padding: 22px; } .contact-form button { justify-self: stretch; } }
